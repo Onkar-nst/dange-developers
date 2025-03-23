@@ -17,35 +17,19 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="flex items-start">
+          <div className="flex items-start flex-col">
+            {/* Company Name */}
+            <h3 className="text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-orange-400">
+              Dange Associate
+            </h3>
             {/* Logo */}
             <img
-              src="/logo.png" // Replace with the actual path to your logo
+              src="/footer-logo.jpg" // Replace with the actual path to your logo
               alt="Dange Associate Logo"
-              className="h-12 w-12 mr-4" // Adjust height and width as needed
+              className="h-84 w-84 object-contain" // Increase size by 1.75x
             />
             <div>
-              <h3 className="text-2xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-orange-400">
-                Dange Associate
-              </h3>
-              <p className="text-gray-400 mb-6">
-                Transforming land into legacies for over 18 years. We provide premium land development with world-class
-                amenities and clear title guarantee.
-              </p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors duration-300">
-                  <Twitter className="h-5 w-5" />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors duration-300">
-                  <Instagram className="h-5 w-5" />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors duration-300">
-                  <Linkedin className="h-5 w-5" />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors duration-300">
-                  <Youtube className="h-5 w-5" />
-                </a>
-              </div>
+              {/* Additional content can go here */}
             </div>
           </div>
 

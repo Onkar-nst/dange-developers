@@ -40,6 +40,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
+              <img
+                src="/navbar-logo.jpg" // Replace with the actual image name in the public folder
+                alt="Logo"
+                className="h-12 w-14 mr-4 object-contain" // Adjust size as needed
+              />
               <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-orange-500">
                 Dange Associate
               </span>
