@@ -5,29 +5,31 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [hasMounted, setHasMounted] = useState(false)
 
   const slides = [
     {
       title: "Invest in Your Future",
       subtitle: "NTPA-Approved Projects with Clear Title Guarantee",
-      image: "/placeholder.svg?height=800&width=1600",
+      image: "https://images.unsplash.com/photo-1581093448793-5dfc6e2c81f4?auto=format&fit=crop&w=1600&q=80",
       cta: "Learn More",
     },
     {
       title: "Premium Amenities",
       subtitle: "Modern Infrastructure for Contemporary Living",
-      image: "/placeholder.svg?height=800&width=1600",
+      image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1600&q=80",
       cta: "View Amenities",
     },
     {
-      title: "Doraemon's World",
-      subtitle: "Step into the Adventures of Doraemon",
-      image: "https://upload.wikimedia.org/wikipedia/en/1/16/Doraemon_character.png",
+      title: "Luxury Living Spaces",
+      subtitle: "Experience Comfort & Style Like Never Before",
+      image: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1600&q=80",
       cta: "Discover More",
     },
   ]
 
   useEffect(() => {
+    setHasMounted(true)
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1))
     }, 5000)
@@ -43,8 +45,10 @@ const HeroSection = () => {
     setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1))
   }
 
+  if (!hasMounted) return null // avoid mismatch during server render
+
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-[70vh] w-full overflow-hidden ">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -59,9 +63,12 @@ const HeroSection = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30"></div>
           <div className="container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fadeIn">{slide.title}</h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl animate-fadeIn">{slide.subtitle}</p>
-            <a href="#why-invest" className="btn-secondary animate-fadeIn">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">{slide.title}</h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl">{slide.subtitle}</p>
+            <a
+              href="#why-invest"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg transition-all duration-300"
+            >
               {slide.cta}
             </a>
           </div>
@@ -85,7 +92,7 @@ const HeroSection = () => {
       </button>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -102,4 +109,3 @@ const HeroSection = () => {
 }
 
 export default HeroSection
-
