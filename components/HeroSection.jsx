@@ -1,11 +1,10 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const HeroSection = () => {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [hasMounted, setHasMounted] = useState(false)
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
     {
@@ -26,29 +25,26 @@ const HeroSection = () => {
       image: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1600&q=80",
       cta: "Discover More",
     },
-  ]
+  ];
 
   useEffect(() => {
-    setHasMounted(true)
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1))
-    }, 5000)
+      setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    }, 5000);
 
-    return () => clearInterval(interval)
-  }, [slides.length])
+    return () => clearInterval(interval);
+  }, [slides.length]);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1))
-  }
+    setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+  };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1))
-  }
-
-  if (!hasMounted) return null // avoid mismatch during server render
+    setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  };
 
   return (
-    <section className="relative h-[70vh] w-full overflow-hidden ">
+    <section className="relative h-[70vh] w-full overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -105,7 +101,7 @@ const HeroSection = () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;

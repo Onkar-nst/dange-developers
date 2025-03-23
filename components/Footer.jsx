@@ -6,9 +6,8 @@ const Footer = () => {
   const quickLinks = [
     "Home",
     "Our Story",
-    "Our Impact",
     "Projects",
-    "contact",
+    "Reach Us",
   ]
   const projects = [
     "Green Valley",
