@@ -4,12 +4,16 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   const quickLinks = ["Home", "Our Story", "Projects", "Reach Us"];
   const projects = [
-    "Green Valley",
-    "Urban Heights",
-    "Riverside Plots",
-    "Hillside Villas",
-    "Downtown Spaces",
-    "Commercial Plots",
+    "Shri Ram Nagari 1",
+    "Shri Ram Nagari 2",
+    "Dange Layout 1",
+    "Dange Layout 2",
+    "Dange Layout 3",
+    "Om Sai Ram Nagari ",
+    "Dange Layout 4",
+    "Shri Sai Ram Nagari 1",
+    "Shri Sai Ram Nagari 2",
+    "Dnyaneshwar Layout",
   ];
 
   return (
@@ -40,7 +44,17 @@ const Footer = () => {
               {quickLinks.map((link) => (
                 <li key={link}>
                   <a
-                    href="#"
+                    href={
+                      link === "Home"
+                        ? "/"
+                        : link === "Our Story"
+                        ? "/about-us"
+                        : link === "Projects"
+                        ? "/projects"
+                        : link === "Reach Us"
+                        ? "/contact"
+                        : "#"
+                    }
                     className="text-gray-400 hover:text-orange-500 transition-colors duration-300 flex items-center"
                   >
                     <ArrowRight className="h-4 w-4 mr-2" />
@@ -58,7 +72,6 @@ const Footer = () => {
               {projects.map((project) => (
                 <li key={project}>
                   <a
-                    href="#"
                     className="text-gray-400 hover:text-orange-500 transition-colors duration-300 flex items-center"
                   >
                     <ArrowRight className="h-4 w-4 mr-2" />
@@ -75,15 +88,15 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-orange-500 mr-3 mt-1" />
-                <span className="text-gray-400">123 Land Avenue, Property District, City - 123456</span>
+                <span className="text-gray-400">Dange Associates and Developer, beside ICICI bank,Kalmeshwar - 441501</span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-orange-500 mr-3" />
-                <span className="text-gray-400">+1 (123) 456-7890</span>
+                <span className="text-gray-400">+91 7774882844</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-orange-500 mr-3" />
-                <span className="text-gray-400">info@landassociate.com</span>
+                <span className="text-gray-400">vedantdange18@gmail.com</span>
               </li>
               <li className="flex items-center">
                 <Clock className="h-5 w-5 text-orange-500 mr-3" />
