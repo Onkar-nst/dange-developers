@@ -24,7 +24,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Our Story", href: "/about-us" }, // Ensure this matches the file path
-    { name: "Projects", href: "#why-invest" },
+    { name: "Projects", href: "/projects" }, // Corrected to lowercase
     { name: "Reach Us", href: "/contact" },
   ];
 

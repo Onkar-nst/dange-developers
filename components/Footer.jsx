@@ -1,14 +1,8 @@
-import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, Linkedin, Youtube, ArrowRight } from "lucide-react"
+import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, Linkedin, Youtube, ArrowRight } from "lucide-react";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear()
-  // quick links change karde
-  const quickLinks = [
-    "Home",
-    "Our Story",
-    "Projects",
-    "Reach Us",
-  ]
+  const currentYear = new Date().getFullYear();
+  const quickLinks = ["Home", "Our Story", "Projects", "Reach Us"];
   const projects = [
     "Green Valley",
     "Urban Heights",
@@ -16,34 +10,42 @@ const Footer = () => {
     "Hillside Villas",
     "Downtown Spaces",
     "Commercial Plots",
-  ]
+  ];
 
   return (
     <footer id="contact" className="bg-gray-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div>
-            <h3 className="text-2xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-orange-400">
-                  Dange Associate
-            </h3>
-            <p className="text-gray-400 mb-6">
-              Transforming land into legacies for over 18 years. We provide premium land development with world-class
-              amenities and clear title guarantee.
-            </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors duration-300">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors duration-300">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors duration-300">
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors duration-300">
-                <Youtube className="h-5 w-5" />
-              </a>
+          <div className="flex items-start">
+            {/* Logo */}
+            <img
+              src="/logo.png" // Replace with the actual path to your logo
+              alt="Dange Associate Logo"
+              className="h-12 w-12 mr-4" // Adjust height and width as needed
+            />
+            <div>
+              <h3 className="text-2xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-orange-400">
+                Dange Associate
+              </h3>
+              <p className="text-gray-400 mb-6">
+                Transforming land into legacies for over 18 years. We provide premium land development with world-class
+                amenities and clear title guarantee.
+              </p>
+              <div className="flex space-x-4">
+                <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors duration-300">
+                  <Twitter className="h-5 w-5" />
+                </a>
+                <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors duration-300">
+                  <Instagram className="h-5 w-5" />
+                </a>
+                <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors duration-300">
+                  <Linkedin className="h-5 w-5" />
+                </a>
+                <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors duration-300">
+                  <Youtube className="h-5 w-5" />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -113,8 +115,8 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
 
