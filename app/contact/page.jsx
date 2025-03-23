@@ -2,7 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ContactForm from "@/components/contactform";
+import ContactForm from "@/components/Contactform";
 import { Building, Phone, Mail } from "lucide-react";
 
 export default function ContactSection() {
