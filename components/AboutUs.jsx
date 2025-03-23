@@ -182,20 +182,19 @@ const AboutUs = () => {
                             whileHover={{ scale: 1.05 }}
                             className="group"
                         >
-                            <div className="bg-white rounded-xl shadow-xl overflow-hidden transform transition-all duration-300 group-hover:shadow-2xl w-96 mx-auto">
+                            <div className="bg-white rounded-xl overflow-hidden transform transition-all duration-300 group-hover:shadow-2xl w-96 mx-auto">
                                 <div className="relative h-64">
                                     <img
-                                        src="/images/pramod-dange.jpg" // Updated image path
+                                        src="/pramod.jpeg" // Updated image path
                                         alt="Pramod Dange - CEO"
-                                        className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+                                        className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 brightness-110" // Increased brightness
                                     />
-                                    <div
-                                        style={{ backgroundColor: "rgba(0,0,0,0.7)" }}
-                                        className="absolute inset-0 bg-gradient-to-t opacity-80"
-                                    ></div>
                                     <div className="absolute bottom-0 left-0 p-6">
                                         <h3 className="text-2xl font-bold text-white mb-2">Pramod Dange</h3>
-                                        <p style={{ color: colors.orange }} className="font-medium text-lg">
+                                        <p
+                                            style={{ color: colors.orange }}
+                                            className="font-medium text-lg opacity-80" // Added slight transparency
+                                        >
                                             Founder & CEO
                                         </p>
                                     </div>
@@ -220,14 +219,10 @@ const AboutUs = () => {
                             <div className="bg-white rounded-xl shadow-xl overflow-hidden transform transition-all duration-300 group-hover:shadow-2xl w-96 mx-auto">
                                 <div className="relative h-64">
                                     <img
-                                        src="/images/vedant-dange.jpg" // Updated image path
+                                        src="/vedant.jpeg" // Corrected relative path for the image
                                         alt="Vedant Dange - Co-Founder"
                                         className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
                                     />
-                                    <div
-                                        style={{ backgroundColor: "rgba(0,0,0,0.7)" }}
-                                        className="absolute inset-0 bg-gradient-to-t opacity-80"
-                                    ></div>
                                     <div className="absolute bottom-0 left-0 p-6">
                                         <h3 className="text-2xl font-bold text-white mb-2">Vedant Dange</h3>
                                         <p style={{ color: colors.orange }} className="font-medium text-lg">
